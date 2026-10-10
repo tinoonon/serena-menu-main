@@ -7,19 +7,30 @@
         body {
             margin: 0;
             padding: 0;
-            background: #000;
+            background: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        .container {
+            position: relative;
+            overflow: hidden;
         }
         
         img {
-            background: transparent;
+            display: block;
+            /* Recorta a imagem para mostrar apenas a parte rosa central */
+            clip-path: inset(112px 320px 112px 320px);
+            transform: scale(1);
         }
     </style>
 </head>
 <body>
-    <img src="./base22.png" alt="Serena Menu">
+    <div class="container">
+        <img src="./base22.png" alt="Serena Menu">
+    </div>
 </body>
 </html>
